@@ -1,0 +1,15 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build",
+            "type": "shell",
+            "command": "c:/cc65/bin/cl65 --target none ./prg/main.asm -C ./config.cfg --verbose  --cpu 6502X --mapfile ./dist/output.map -g --listing ./dist/output.lst -Wl --dbgfile,./dist/output.dbg -o ./dist/output.xgnes",
+            "problemMatcher": ["$ca65", "$ld65"],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+        }
+    ]
+}
